@@ -1,0 +1,24 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4674
+
+Tools to make Vim superb for developing with Node.js.
+It's the Node equivalent of Rails.vim (vimscript #1567) and Rake.vim (vimscript #3669).
+
+This is just the first release to get the nodes rolling. If you've collected great helpers and shortcuts that help you work with Node, please share them via email (andri@dot.ee), Twitter (https://twitter.com/theml) GitHub issues (https://github.com/moll/vim-node/issues) so we could incorporate them here, too! Thanks!
+
+Tour:
+- Use gf on paths or requires to open the same file Node.js would.
+- Use gf on require(".") to open ./index.js
+- Use gf on require("./dir") to open ./dir/index.js
+- Use gf on require("./foo") to open foo.js.
+- Use gf on require("./package") and have it open package.json.
+- Use gf on require("module") to open the module's main file (parsed for you from package.json).
+- Use gf on require("module/lib/utils") and open files inside the module.
+- Automatically sets the filetype to JavaScript for files with Node's shebang (#!).
+- Use [I etc. to look for a keyword in required files (Sets Vim's &include).
+- Node.vim itself is tested with a thorough automated integration test suite! No cowboy coding here!
+
+Expect more to come soon and feel free to let me know what you're after!
+
+PS. Node.vim is absolutely intended to work on Windows, but not yet tested there at all. If you could help, try it out and report issues, I'd be grateful!
+
+Latest development version and more info with full README at https://github.com/moll/vim-node.
