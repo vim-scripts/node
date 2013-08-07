@@ -1,6 +1,7 @@
 function! node#initialize(root)
 	let b:node_root = a:root
 	if &filetype == "javascript" | call s:initializeJavaScript() | endif
+	silent doautocmd User Node
 endfunction
 
 function! s:initializeJavaScript()
@@ -13,6 +14,8 @@ function! s:initializeJavaScript()
 		\ :call <SID>edit(expand("<cfile>"), bufname("%"))<CR>
 	nnoremap <buffer><silent> <Plug>NodeSplitGotoFile
 		\ :call <SID>edit(expand("<cfile>"), bufname("%"), "split")<CR>
+	nnoremap <buffer><silent> <Plug>NodeVSplitGotoFile
+		\ :call <SID>edit(expand("<cfile>"), bufname("%"), "vsplit")<CR>
 	nnoremap <buffer><silent> <Plug>NodeTabGotoFile
 		\ :call <SID>edit(expand("<cfile>"), bufname("%"), "tab split")<CR>
 

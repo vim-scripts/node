@@ -1,5 +1,7 @@
 Node.vim
 ========
+[![Build status](https://travis-ci.org/moll/vim-node.png)](https://travis-ci.org/moll/vim-node)
+
 Tools to make Vim superb for developing with Node.js.  
 It's the Node equivalent of [Rails.vim (vimscript #1567)](https://github.com/tpope/vim-rails) and [Rake.vim (vimscript #3669)](https://github.com/tpope/vim-rake).
 
@@ -50,9 +52,24 @@ Using
 -----
 Open any JavaScript file inside a Node project and you're all set.
 
-- Use `gf` on `require()` to jump to source files.
+- Use `gf` inside `require("...")` to jump to source and module files.
 - Use `[I` on any keyword to look for it in the current and required files.
 
+#### Want to customize settings for files inside a Node projects?
+Use the `Node` autocommand. For example:
+```vim
+autocmd User Node if &filetype == "javascript" | set expandtab | endif
+```
+
+#### Want `<C-w>f` to open the file under the cursor in a new vertical split?
+`<C-w>f` by default opens it in a horizontal split. To have it open vertically, drop this in your `vimrc`:
+```vim
+autocmd User Node
+  \ if &filetype == "javascript"
+  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile
+  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile
+  \ endif
+```
 
 License
 -------
