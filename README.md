@@ -1,6 +1,6 @@
 Node.vim
 ========
-[![Build status](https://travis-ci.org/moll/vim-node.png)](https://travis-ci.org/moll/vim-node)
+[![Build status](https://travis-ci.org/moll/vim-node.png?branch=master)](https://travis-ci.org/moll/vim-node)
 
 Tools to make Vim superb for developing with Node.js.  
 It's the Node equivalent of [Rails.vim (vimscript #1567)](https://github.com/tpope/vim-rails) and [Rake.vim (vimscript #3669)](https://github.com/tpope/vim-rake).
@@ -20,6 +20,7 @@ This is just the first release to get the nodes rolling. If you've collected gre
 - Use `[I` etc. to look for a keyword in required files (Sets Vim's `&include`).
 - Use `:Nedit` to quickly edit any module, file in a module or your project file.
 - Use `:Nopen` to quickly edit any module and `lcd` to its directory.
+- Lets you even open Node's core modules. They're shown straight from Node's online repository without you having to download everything.
 - Node.vim itself is tested with a thorough automated integration test suite! No cowboy coding here!
 
 Expect more to come soon and feel free to let me know what you're after!
