@@ -1,3 +1,0 @@
-*node.txt*  Tools and utilities to make Vim superb for Node.js projects
-
-If you work with Node.js, you're going to love this.
